@@ -22,7 +22,7 @@ public class CashBackServiceTest {
     @Test
     public void shouldCalculateNeedToBuyIfThousand(){
         int amount = service.remain(1000);
-        assertEquals(amount, 1000);
+        assertEquals(amount, 0);
     }
 
     @Test
