@@ -7,25 +7,25 @@ import static org.testng.Assert.*;
 public class CashBackServiceTest {
     CashBackService service = new CashBackService();
 
-    @Test
+    @org.testng.annotations.Test
     public void shouldCalculateNeedToBuyIfZero(){
         int amount = service.remain(0);
         assertEquals(amount, 1000);
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void shouldCalculateNeedToBuy(){
         int amount = service.remain(700);
         assertEquals(amount, 300);
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void shouldCalculateNeedToBuyIfThousand(){
         int amount = service.remain(1000);
         assertEquals(amount, 0);
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void shouldCalculateNeedToBuyIfOverThousand(){
         int amount = service.remain(1700);
         assertEquals(amount, 300);
