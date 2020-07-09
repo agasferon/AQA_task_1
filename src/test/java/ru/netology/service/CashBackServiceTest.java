@@ -7,25 +7,25 @@ import static org.junit.Assert.*;
 public class CashBackServiceTest {
     CashBackService service = new CashBackService();
 
-    @Test
+    @org.junit.Test
     public void shouldCalculateNeedToBuyIfZero(){
         int amount = service.remain(0);
         assertEquals(1000, amount);
     }
 
-    @Test
+    @org.junit.Test
     public void shouldCalculateNeedToBuy(){
         int amount = service.remain(700);
         assertEquals(300, amount);
     }
 
-    @Test
+    @org.junit.Test
     public void shouldCalculateNeedToBuyIfThousand(){
         int amount = service.remain(1000);
         assertEquals(0, amount);
     }
 
-    @Test
+    @org.junit.Test
     public void shouldCalculateNeedToBuyIfOverThousand(){
         int amount = service.remain(1700);
         assertEquals(300, amount);
