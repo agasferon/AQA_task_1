@@ -1,32 +1,32 @@
 package ru.netology.service;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class CashBackServiceTest {
+public class CashBackServiceTestJunitJupiter {
     CashBackService service = new CashBackService();
 
-    @org.junit.Test
-    public void shouldCalculateNeedToBuyIfZero(){
+    @Test
+    public void shouldCalculateNeedToBuyIfZeroJUnit5(){
         int amount = service.remain(0);
         assertEquals(1000, amount);
     }
 
-    @org.junit.Test
-    public void shouldCalculateNeedToBuy(){
+    @Test
+    public void shouldCalculateNeedToBuyJUnit5(){
         int amount = service.remain(700);
         assertEquals(300, amount);
     }
 
-    @org.junit.Test
-    public void shouldCalculateNeedToBuyIfThousand(){
+    @Test
+    public void shouldCalculateNeedToBuyIfThousandJUnit5(){
         int amount = service.remain(1000);
         assertEquals(0, amount);
     }
 
-    @org.junit.Test
-    public void shouldCalculateNeedToBuyIfOverThousand(){
+    @Test
+    public void shouldCalculateNeedToBuyIfOverThousandJUnit5(){
         int amount = service.remain(1700);
         assertEquals(300, amount);
     }
